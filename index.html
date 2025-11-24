@@ -3,85 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoSpire Project Visuals</title>
+    <title>EcoSpire Project - Sustainability Visuals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Sayfanın genel görünüm ayarları */
+        /* --- GENEL SAYFA AYARLARI --- */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Poppins', sans-serif; /* Modern, temiz yazı tipi */
+            background-color: #f4f7f0; /* Doğal, açık toprak/nane tonu arka plan */
+            color: #333; /* Okuması kolay koyu gri metin */
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
 
-        /* Başlık stili */
+        /* --- ANA BAŞLIK --- */
         h1 {
-            color: #333;
-            margin-bottom: 40px;
+            color: #2E7D32; /* Orman Yeşili */
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
-        /* Her bir görsel kutusu için ayar */
-        .image-container {
-            background: white;
-            padding: 20px;
+        /* Başlığın altındaki küçük açıklama */
+        .subtitle {
+            text-align: center;
+            color: #555;
             margin-bottom: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 800px; /* Kutunun maksimum genişliği */
+            font-size: 1.1rem;
+        }
+
+        /* --- GÖRSEL KUTULARI (CONTAINER) --- */
+        .image-container {
+            background: #ffffff; /* Temiz beyaz iç arka plan */
+            padding: 35px; /* İç boşluk arttırıldı */
+            margin-bottom: 60px; /* Kutular arası mesafe arttırıldı */
+            border-radius: 16px; /* Köşeler daha yumuşak */
+            /* Hafif yeşilimsi, modern bir gölge efekti */
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.1);
+            max-width: 1000px; /* Kutu genişliği biraz daha arttırıldı */
             margin-left: auto;
             margin-right: auto;
+            border-top: 5px solid #4CAF50; /* Kutunun tepesine canlı yeşil bir çizgi */
+            transition: transform 0.3s ease; /* Fare ile üzerine gelince hareket efekti için */
         }
 
-        /* Görsel başlıkları */
+        /* Üzerine gelince kutu hafifçe yukarı kalksın */
+        .image-container:hover {
+             transform: translateY(-5px);
+        }
+
+        /* --- GÖRSEL BAŞLIKLARI (H3) --- */
         .image-container h3 {
-            color: #555;
-            margin-bottom: 15px;
+            color: #1b5e20; /* Koyu yeşil başlık */
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
         }
 
-        /* Resimlerin boyutu: Normalde %50, Mobilde %95 */
+        /* --- GÖRSELLERİN KENDİSİ --- */
         .responsive-img {
-            width: 50%;  /* İsteğiniz üzerine %50 küçültüldü */
+            /* İSTEĞİNİZ ÜZERİNE BÜYÜTÜLDÜ: %50 yerine %75 */
+            width: 75%; 
             height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            display: block; /* Ortalamak için gerekli */
+            margin: 0 auto; /* Ortala */
+            border-radius: 8px;
+            /* Görsele de hafif bir derinlik katalım */
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
         }
 
-        /* Eğer telefondan girilirse resimler çok küçük kalmasın diye: */
-        @media screen and (max-width: 600px) {
-            .responsive-img {
-                width: 95%;
+        /* --- MOBİL UYUMLULUK --- */
+        /* Tabletler ve telefonlar için ayarlar (ekran 768px'den küçükse) */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px 10px;
             }
+            h1 {
+                font-size: 2rem;
+            }
+            .image-container {
+                padding: 20px;
+            }
+            .responsive-img {
+                width: 100%; /* Mobilde görseller tam genişlikte olsun */
+            }
+        }
+        
+        /* --- BASİT ALT BİLGİ (FOOTER) --- */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        footer span {
+            color: #2E7D32;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h1>EcoSpire Project Overview</h1>
+    <header>
+        <h1>EcoSpire Project</h1>
+        <p class="subtitle">Innovating for a Sustainable Future through Smart Analysis & Concept Mapping</p>
+    </header>
 
-    <div class="image-container">
-        <h3>Smart System Poster</h3>
-        <img src="SmartSystemPoster.svg" alt="Smart System Poster" class="responsive-img">
-    </div>
+    <main>
+        <section class="image-container">
+            <h3>Smart System Poster</h3>
+            <img src="SmartSystemPoster.svg" alt="Smart System Poster Visualization" class="responsive-img">
+        </section>
 
-    <div class="image-container">
-        <h3>Mind & Concept Mapping</h3>
-        <img src="MindConceptMapping.svg" alt="Mind Concept Map" class="responsive-img">
-    </div>
+        <section class="image-container">
+            <h3>Mind & Concept Mapping</h3>
+            <img src="MindConceptMapping.svg" alt="Mind Concept Map" class="responsive-img">
+        </section>
 
-    <div class="image-container">
-        <h3>Analysis Chart</h3>
-        <img src="Analysis(2).svg" alt="Analysis Graph" class="responsive-img">
-    </div>
+        <section class="image-container">
+            <h3>Analysis Chart</h3>
+            <img src="Analysis(2).svg" alt="Analysis Graph" class="responsive-img">
+        </section>
 
-    <div class="image-container">
-        <h3>Project Details</h3>
-        <img src="Details(2).svg" alt="Project Details" class="responsive-img">
-    </div>
+        <section class="image-container">
+            <h3>Project Details</h3>
+            <img src="Details(2).svg" alt="Project Details" class="responsive-img">
+        </section>
 
-    <div class="image-container">
-        <h3>Information</h3>
-        <img src="Information.svg" alt="Information Info" class="responsive-img">
-    </div>
+        <section class="image-container">
+            <h3>Information</h3>
+            <img src="Information.svg" alt="Information Info" class="responsive-img">
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 <span>EcoSpire</span> Project. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
