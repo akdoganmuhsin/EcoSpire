@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSpire Project Visuals</title>
+    <style>
+        /* Sayfanın genel görünüm ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
 
+        /* Başlık stili */
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        /* Her bir görsel kutusu için ayar */
+        .image-container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px; /* Kutunun maksimum genişliği */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Görsel başlıkları */
+        .image-container h3 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Resimlerin boyutu: Normalde %50, Mobilde %95 */
+        .responsive-img {
+            width: 50%;  /* İsteğiniz üzerine %50 küçültüldü */
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Eğer telefondan girilirse resimler çok küçük kalmasın diye: */
+        @media screen and (max-width: 600px) {
+            .responsive-img {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EcoSpire Project Overview</h1>
+
+    <div class="image-container">
+        <h3>Smart System Poster</h3>
+        <img src="SmartSystemPoster.svg" alt="Smart System Poster" class="responsive-img">
+    </div>
+
+    <div class="image-container">
+        <h3>Mind & Concept Mapping</h3>
+        <img src="MindConceptMapping.svg" alt="Mind Concept Map" class="responsive-img">
+    </div>
+
+    <div class="image-container">
+        <h3>Analysis Chart</h3>
+        <img src="Analysis(2).svg" alt="Analysis Graph" class="responsive-img">
+    </div>
+
+    <div class="image-container">
+        <h3>Project Details</h3>
+        <img src="Details(2).svg" alt="Project Details" class="responsive-img">
+    </div>
+
+    <div class="image-container">
+        <h3>Information</h3>
+        <img src="Information.svg" alt="Information Info" class="responsive-img">
+    </div>
+
+</body>
+</html>
